@@ -1,0 +1,511 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: rgb(2, 2, 49);
+  color: white;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: rgb(2, 2, 49);
+  padding: 20px 0;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #e9c46a;
+}
+
+/* Hero */
+#hero {
+  background: rgb(2, 2, 49);
+  padding: 60px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 60px;
+  color: goldenrod;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 500px;
+  height: auto;
+  max-width: 100%;
+  box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+  display: block;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(218, 165, 32, 0.6);
+}
+
+/* Seções gerais */
+.section {
+  padding: 40px 0;
+  border-bottom: 1px solid #444;
+}
+
+.section h3 {
+  font-size: 1.8rem;
+  color: goldenrod;
+}
+
+.section h4 {
+  font-size: 1.4rem;
+  margin-bottom: 35px;
+  color: goldenrod;
+}
+
+.section p,
+.section ul,
+.section ol {
+  font-size: 1rem;
+  color: white;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.section ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.section ul li,
+.section ol li {
+  margin-bottom: 10px;
+}
+
+/* Links das seções Recursos e Descarte */
+#recursos a,
+#descarte a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+#recursos a:hover,
+#descarte a:hover {
+  color: goldenrod;
+  text-decoration: underline;
+}
+
+/* Layout texto + imagem */
+.text-image-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 10px 0;
+  max-width: 900px;
+}
+
+.text-image-container p,
+.text-image-container ul,
+.text-image-container ol {
+  flex: 1.5;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: white;
+  vertical-align: top;
+}
+
+/* Imagens laterais */
+.text-image-container .side-image {
+  flex: 1;
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.text-image-container .side-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(218, 165, 32, 0.6);
+}
+
+/* ====== ESPAÇAMENTOS CORRETOS DOS TÍTULOS ====== */
+
+/* "Onde Descartar" */
+#descarte h3 {
+  margin-top: 100px;   
+  margin-bottom: 50px; 
+}
+
+/* "Dicas para uma beleza consciente" */
+#dicas h3 {
+  margin-top: 140px;    
+  margin-bottom: 120px; 
+}
+
+/* "Recursos e Links Úteis" */
+#recursos h3 {
+  margin-top: 100px;    
+  margin-bottom: 100px; 
+}
+
+/* "Compartilhe Conosco" */
+#contato h3 {
+  margin-top: 100px;
+  margin-bottom: 100px; 
+}
+
+/* "O que é o consumo excessivo de cosméticos?" - Diminuído um pouco mais */
+#sobre h3 {
+  margin-top: 100px;
+  margin-bottom: 55px; /* Diminuído de 100px para 80px, como solicitado */
+}
+
+/* Ajuste para a seção #sobre como um todo */
+#sobre:target {
+  padding-top: 80px; /* Espaço extra no topo quando a âncora é ativada */
+}
+
+#sobre {
+  margin-top: -80px;
+  padding-top: 80px;
+  padding-bottom: 80px; /* Ajustado para manter consistência, mas com menos espaço */
+}
+
+/* Espaçamento extra entre texto e links */
+#recursos a {
+  margin-bottom: 25px;
+}
+
+/* Espaçamento extra entre parágrafo e links */
+#recursos p {
+  margin-bottom: 50px;
+}
+
+/* Aumentar imagem em #dicas */
+#dicas .side-image:nth-of-type(1) {
+  max-width: 360px;
+}
+
+/* Estilos para imagens em #dicas e #descarte */
+#dicas .side-image,
+#descarte .side-image {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+  transition: all 0.3s ease;
+}
+
+#dicas .side-image:hover,
+#descarte .side-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(218, 165, 32, 0.6);
+}
+
+/* Espaçamento adicional para itens de lista em #dicas */
+#dicas ul li,
+#dicas ol li {
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+/* Texto introdutório em #descarte */
+#descarte h3 + .text-image-container p:first-of-type {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+/* "Onde Descartar" */
+#descarte p + h4 {
+  margin-top: 50px !important;
+  margin-bottom: 35px;
+}
+
+/* "Dica Sustentável" */
+#descarte .text-image-container:nth-of-type(2) h4 {
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+
+/* Texto explicativo em #sobre */
+#sobre h3 + p {
+  margin-top: 30px;
+  line-height: 1.7;
+}
+
+/* Espaçamento maior no final de #descarte */
+#descarte ul li:last-child,
+#descarte ol li:last-child,
+#descarte p:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* Aumentar o espaço da linha inferior em #descarte */
+#descarte {
+  padding-bottom: 80px;
+}
+
+/* --- AJUSTE: alinhar imagem com parágrafo específico em #dicas --- */
+/* Aplicamos alinhamento vertical 'center' aos containers de #dicas,
+   assim o texto e a imagem ficam alinhados verticalmente (centralizados).
+   Isso alinha a imagem com o parágrafo "Antes de levar suas embalagens..." */
+#dicas .text-image-container {
+  align-items: center;  /* centraliza a imagem com o bloco de texto */
+  gap: 30px;             /* espaço entre texto e imagem */
+}
+
+/* Para o caso da última imagem dentro de #dicas (se houver necessidade) */
+#dicas .text-image-container:last-of-type .side-image {
+  margin-top: 0; /* garante que não haja empurrões extras */
+}
+
+/* Última imagem do #descarte: manter alinhamento anterior (se quiser descer mais, ajuste aqui) */
+#descarte .text-image-container:last-of-type .side-image {
+  margin-top: 40px; /* mantém o empurrão que alinhamos antes */
+}
+
+/* Formulário de contato */
+#contato {
+  background: rgb(2, 2, 49);
+  padding: 50px 0;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: goldenrod;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e9c46a;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: goldenrod;
+  box-shadow: 0 0 8px rgba(218, 165, 32, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-form button {
+  background: goldenrod;
+  color: rgb(2, 2, 49);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+}
+
+.contact-form button:hover {
+  background: #daa520;
+  transform: translateY(-2px);
+}
+
+.contact-form button:active {
+  transform: translateY(0);
+}
+
+/* Rodapé */
+footer {
+  background: rgb(2, 2, 49);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid #444;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .hero-image img {
+    width: 400px;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-image-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .text-image-container .side-image {
+    max-width: 100%;
+    order: 2;
+    margin-left: 0;
+  }
+
+  #descarte .side-image {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  #dicas .side-image {
+    max-width: 100%;
+    margin-top: 20px; /* em mobile a imagem fica abaixo do texto com pequeno espaçamento */
+  }
+
+  .contact-form {
+    padding: 0 10px;
+    background: none;
+    box-shadow: none;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    max-width: none;
+    padding: 14px;
+  }
+
+  /* Ajustes responsivos para espaçamentos dos títulos h3 */
+  #descarte h3,
+  #dicas h3,
+  #recursos h3,
+  #contato h3,
+  #sobre h3 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image img {
+    width: 300px;
+  }
+
+  .section h3 {
+    font-size: 1.5rem;
+  }
+
+  .section h4 {
+    margin-bottom: 25px;
+  }
+
+  /* espaçamentos reduzidos em telas muito pequenas */
+  #descarte h3,
+  #dicas h3,
+  #recursos h3,
+  #contato h3,
+  #sobre h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  /* em telas pequenas a imagem vai abaixo do texto, garantir espaçamento */
+  #dicas .text-image-container {
+    align-items: center;
+  }
+
+  #dicas .side-image {
+    margin-top: 18px;
+  }
+}
